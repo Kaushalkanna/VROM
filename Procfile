@@ -1,0 +1,1 @@
+web: gunicorn vasavi_rates.wsgi --log-file -
