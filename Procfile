@@ -1,1 +1,1 @@
-web: gunicorn vasavi_rates.wsgi --log-file -
+web: gunicorn vasavi_rates.wsgi
