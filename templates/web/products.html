@@ -1,3 +1,5 @@
+{% load app_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,14 +27,15 @@
     <table>
         <tr>
             <th>Name</th>
-            <th>Rate</th>
+            <th colspan="2">Rate</th>
             <th>Date</th>
         </tr>
         {% for product in products %}
             <tr>
-                <th>{{ product.product_name|capfirst }}</th>
-                <th>{{ product.product_rate }}/Q</th>
-                <th>{{ product.product_pub_date }}</th>
+                <td>{{ product.product_name|capfirst }}</td>
+                <td>{{ product.product_rate }}/Quintal</td>
+                <td>{{ product.product_rate|divide:2 }}/Bag</td>
+                <td>{{ product.product_pub_date }}</td>
             </tr>
         {% endfor %}
     </table>

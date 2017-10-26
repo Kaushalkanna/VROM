@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!0dl9-e5k6k2liz*omb=-2+sbfe$f!35ze_7(%9jqc9409vomt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['vrom.herokuapp.com', ]
+ALLOWED_HOSTS = ['vrom.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
