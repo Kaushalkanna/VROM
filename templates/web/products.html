@@ -1,29 +1,38 @@
+{% extends "bootstrap_ui/bootstrap-skeleton.html" %}
 {% load app_tags %}
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Products</title>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
+    {% block head-meta %}
+        <meta charset="UTF-8">
+    {% endblock %}
+    {% block head-title %}
+        Products
+    {% endblock %}
+    {% block head-css %}
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-        td, th {
-            border: 3px solid #000000;
-            text-align: left;
-            padding: 8px;
-        }
+            td, th {
+                border: 3px solid #000000;
+                text-align: left;
+                padding: 8px;
+            }
 
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-    </style>
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    {% endblock %}
 </head>
-<body>
+{% block body-content %}
+    <body>
     <table>
         <tr>
             <th>Name</th>
@@ -39,7 +48,8 @@
             </tr>
         {% endfor %}
     </table>
-</body>
+    </body>
+{% endblock %}
 </html>
 
 
