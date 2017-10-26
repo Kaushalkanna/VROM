@@ -25,7 +25,7 @@ SECRET_KEY = '!0dl9-e5k6k2liz*omb=-2+sbfe$f!35ze_7(%9jqc9409vomt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vrom.herokuapp.com', ]
 
 # Application definition
 
@@ -120,4 +120,3 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
