@@ -10,6 +10,20 @@ def products(request):
 
 
 def product_api(request):
-    products_object = Product.objects.values()
-    product_data = {'products': list(products_object)}
+    serialized_data = serialize_data(list(Product.objects.values_list()))
+    product_data = {'products': serialized_data}
     return JsonResponse(product_data)
+
+
+def serialize_data(data_object):
+    serialized_list = []
+    for lst in data_object:
+        serialized_list.append(
+            {
+                'product_name': lst[1],
+                'product_rate': lst[2],
+                'bag_weight': lst[3],
+                'product_pub_date': lst[4]
+            }
+        )
+    return serialized_list
