@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from web.views.home import homepage
-from web.views.products import products
+from web.views.products import products, product_api
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homepage),
     url(r'^products/$', products),
+    url(r'^product_api/$', product_api),
 ]

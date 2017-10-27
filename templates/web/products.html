@@ -43,7 +43,7 @@
             <tr>
                 <td>{{ product.product_name|capfirst }}</td>
                 <td>{{ product.product_rate }}/Quintal</td>
-                <td>{{ product.product_rate|divide:2 }}/Bag</td>
+                <td>{{ product.product_rate|divide:2 }}/Bag ({{ product.bag_weight }}kgs)</td>
                 <td>{{ product.product_pub_date }}</td>
             </tr>
         {% endfor %}
